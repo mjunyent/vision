@@ -107,7 +107,7 @@ def _read_from_stream(container, start_offset, end_offset, pts_unit, stream, str
                       "follow-up version. Please use pts_unit 'sec'.")
 
     frames = {}
-    should_buffer = False
+    should_buffer = True
     max_buffer_size = 5
     if stream.type == "video":
         # DivX-style packed B-frames can have out-of-order pts (2 frames in a single pkt)
